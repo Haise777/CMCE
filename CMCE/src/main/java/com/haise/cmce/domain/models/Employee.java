@@ -40,7 +40,7 @@ public class Employee {
             CascadeType.MERGE
     })
     @JoinTable(
-            name = "role_employee",
+            name = "role_employees",
             joinColumns = @JoinColumn(name = "employee_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
