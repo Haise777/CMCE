@@ -13,7 +13,6 @@ public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull
     private long id;
 
     @NotEmpty
@@ -33,5 +32,9 @@ public class Company {
     @JsonIgnore
     @OneToMany(mappedBy = "company")
     private List<Employee> employees;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "company")
+    private List<Role> roles;
 
 }
